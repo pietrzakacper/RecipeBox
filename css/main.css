@@ -1,0 +1,21 @@
+body {
+  background: #61bf9a;
+  padding-top: 30px; }
+  body header {
+    max-width: 1140px;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #becd4c;
+    font-size: 50px;
+    font-weight: bolder;
+    border: 5px solid #120d0c; }
+  body #app .delete {
+    margin-right: 8px; }
+  body #app .ingridients-area {
+    resize: vertical; }
+
+.vresize {
+  resize: vertical; }
