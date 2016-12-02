@@ -3,7 +3,7 @@ import React from 'react';
 import Recipe from './Recipe';
 import { Button } from 'reactstrap';
 import Modal from './Modal';
-import { Accordion, Panel } from 'react-bootstrap';
+import { Accordion, Panel, Well } from 'react-bootstrap';
 
 const localStorageKey = 'pietrzakacper-FCC-recipes';
 
@@ -77,23 +77,24 @@ class RecipeBox extends React.Component {
 		return (
   <Accordion>
     {
-			this.state.recipes.map( ( elem, index ) => (
-	(
+			this.state.recipes.map( ( elem, index ) => {
+				return	(
   <Panel header={elem.name}  key={index + Math.random()} eventKey={index + Math.random()}>
     <Recipe name={elem.name} ingridients={elem.ingridients}  id={index} delete={this.deleteRecipe} edit={this.editRecipe} />
-  </Panel>
-) ) )
-	}
+  </Panel> );
+			}
+			)
+		}
   </Accordion>
 		);
 	}
 
 	render() {
 		return (
-  <div className='app-content'>
-    <div className='well'>
+  <div>
+    <Well>
       {this.getRecipesList()}
-    </div>
+    </Well>
     <Button color='primary' onClick={this.showAddRecipeModal}>Add Recipe</Button>
     <Modal isOpen={this.state.showAddRecipeModal} onAccept={this.addRecipe} onHide={this.hideAddRecipeModal} id='addRecipe' />
   </div>

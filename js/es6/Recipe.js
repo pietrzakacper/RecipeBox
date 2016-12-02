@@ -48,7 +48,7 @@ class Recipe extends React.Component{
 		return (
   <div>
     { this.getIngridientsList() }
-    <button className='btn btn-danger delete' onClick={() => this.props.delete( this.props.id )}>Delete</button>
+    <Button color='danger' onClick={() => this.props.delete( this.props.id )}>Delete</Button>{' '}
     <Button onClick={this.showEditRecipeModal}>Edit</Button>
     <Modal isOpen={this.state.showEditRecipeModal} onAccept={this.editRecipe} onHide={this.hideEditRecipeModal} id='addRecipe' name={this.props.name} ingridients={this.props.ingridients} />
   </div>

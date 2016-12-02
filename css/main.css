@@ -1,21 +1,22 @@
 body {
-  background: #61bf9a;
+  background: #263238;
   padding-top: 30px; }
   body header {
-    max-width: 1140px;
-    margin: auto;
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #becd4c;
+    color: #eceff1;
+    background: #1d272d;
     font-size: 50px;
     font-weight: bolder;
-    border: 5px solid #120d0c; }
-  body #app .delete {
-    margin-right: 8px; }
-  body #app .ingridients-area {
+    border: 5px solid #e84e40; }
+  body .vresize {
     resize: vertical; }
-
-.vresize {
-  resize: vertical; }
+  body .panel-heading {
+    transition: all 100ms linear;
+    pointer-events: none; }
+    body .panel-heading a {
+      pointer-events: auto; }
+    body .panel-heading a:hover {
+      text-decoration: none; }
+  body .panel-heading:hover {
+    box-shadow: 0px 0px 14px 2px rgba(102, 174, 233, 0.8);
+    cursor: pointer; }
