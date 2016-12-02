@@ -30,7 +30,7 @@ class Modal extends React.Component {
       </FormGroup>
     </ModalBody>
     <ModalFooter>
-      <Button color='primary' onClick={this.accept}>Accept</Button>{' '}
+      <Button color='primary' className='delete' onClick={this.accept}>Accept</Button>{' '}
       <Button color='secondary' onClick={this.props.onHide}>Cancel</Button>
     </ModalFooter>
   </BsModal>
